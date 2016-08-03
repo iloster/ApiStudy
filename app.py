@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 # 动态路由
 app.register_blueprint(todos_view, url_prefix='/todos')
+app.register_blueprint(todos_view, url_prefix='/news')
 
 
 @app.route('/')
