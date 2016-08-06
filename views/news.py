@@ -8,9 +8,8 @@ from flask import request,jsonify
 from flask import redirect
 from flask import url_for
 from flask import render_template
-import urllib2
-import json
 
+from control.news import Control_News
 # class News(Object):
 #     pass
 
@@ -23,13 +22,13 @@ def getTopicSet():
 	topicSet = urllib2.urlopen("http://c.m.163.com/nc/topicset/ios/subscribe/manage/listspecial.html").read()
 	return topicset
 
+# 获取某一类型的数据
 @news_view.route('/type/<newsType>/list/<int:page>')
 def getListByPage(newsType,page):
-	# urlPrefix = "http://c.m.163.com/nc/article/list/";
-	f = file("config/news.json");
-	s = json.load(f)
-	f.close();
-	tid = s[newsType]
-	url = "http://c.m.163.com/nc/article/list/" + tid + "/" + str(page*10) + "-20.html"
-	return url
-	# return urllib2.urlopen(url).read()
+	control_news = Control_News()
+	return control_news.getListByPage(newsType,page)
+
+@news_view.route("/article/postid/<postid>")
+def getArticleById(postid):
+	control_news = Control_News()
+	return control_news.getArticleById(postid)
