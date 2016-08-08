@@ -19,8 +19,7 @@ news_view = Blueprint('news', __name__)
 
 @news_view.route('')
 def getTopicSet():
-	topicSet = urllib2.urlopen("http://c.m.163.com/nc/topicset/ios/subscribe/manage/listspecial.html").read()
-	return topicset
+	return "hello word"
 
 # 获取某一类型的数据
 @news_view.route('/type/<newsType>/list/<int:page>')
