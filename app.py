@@ -9,6 +9,7 @@ from views.todos import todos_view
 from views.news import news_view
 from views.DBMoment import DBMoment_view
 from views.ChuiZiReader import ChuiZiReader_view
+from views.Eyepetizer import Eyepetizer_view
 
 app = Flask(__name__)
 
@@ -17,7 +18,7 @@ app.register_blueprint(todos_view, url_prefix='/todos')
 app.register_blueprint(news_view, url_prefix='/news')
 app.register_blueprint(DBMoment_view, url_prefix='/dbmoment')
 app.register_blueprint(ChuiZiReader_view, url_prefix='/chuizireader')
-
+app.register_blueprint(Eyepetizer_view, url_prefix='/eyepetizer')
 
 @app.route('/')
 def index():

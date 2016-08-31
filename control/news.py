@@ -2,6 +2,7 @@ import urllib2
 import json
 from flask import jsonify
 # import jsonify
+#http://c.m.163.com/nc/topicset/ios/subscribe/manage/listspecial.html
 class Control_News():
 	
 	def __init__(self):
