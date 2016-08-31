@@ -19,6 +19,13 @@ def getFeedSection():
 	control_Eyepetizer = Control_Eyepetizer()
 	return control_Eyepetizer.getFeedSection()
 
+#开眼精选里视频评论 根据视频id
+@Eyepetizer_view.route('/type/comment/videoId/<videoId>')
+def getCommentById(videoId):
+	control_Eyepetizer = Control_Eyepetizer()
+	return control_Eyepetizer.getCommentById(videoId)
+
+#开眼发现
 @Eyepetizer_view.route("/type/discover/")
 def getDiscoverSection():
 	control_Eyepetizer = Control_Eyepetizer()
