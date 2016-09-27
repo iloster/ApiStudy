@@ -30,3 +30,19 @@ def getCommentById(videoId):
 def getDiscoverSection():
 	control_Eyepetizer = Control_Eyepetizer()
 	return control_Eyepetizer.getDiscover()
+
+
+#开眼最受欢迎
+#weekly  周榜
+#monthly  月榜
+#historical  总榜
+@Eyepetizer_view.route("/type/rankList/strategy/<strategy>")
+def getRankList(strategy):
+	control_Eyepetizer = Control_Eyepetizer()
+	return control_Eyepetizer.getRankList(strategy)
+
+#热门专题
+@Eyepetizer_view.route("/type/specialTopic")
+def getSpecialTopic():
+	control_Eyepetizer = Control_Eyepetizer()
+	return control_Eyepetizer.getSpecialTopic()

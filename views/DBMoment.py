@@ -11,7 +11,7 @@ from flask import render_template
 from control.Control_DBMoment import Control_DBMoment
 DBMoment_view = Blueprint("DBMoment_view",__name__)
 
-@DBMoment_view.route('')
+@DBMoment_view.route('/')
 def getMoment():
 	control_DBMoment = Control_DBMoment()
 	return control_DBMoment.getMoment()
