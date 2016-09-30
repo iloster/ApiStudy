@@ -49,10 +49,10 @@ class Control_One():
 		ret = self.getHtml(url)
 		return ret
 
-	def getReadCommentByPage(self,page):
-		if int(page) == 0:
+	# def getReadCommentByPage(self,page):
+	# 	if int(page) == 0:
 			
-		else:
+	# 	else:
 
 
 

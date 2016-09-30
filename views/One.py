@@ -54,6 +54,6 @@ def getReadRelatedById(assayId):
 #获取文章的评论 以后所有的分页，分页数都是20
 #/tab/read/comment/page/0
 @One_view.route('/tab/read/comment/page/<page>')
-def getReadCommentByPage(page)
+def getReadCommentByPage(page):
 	control_One = Control_One()
 	return control_One.getReadCommentByPage()
